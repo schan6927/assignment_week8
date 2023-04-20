@@ -1,12 +1,9 @@
 dir="files/"
 
-#cd "%dir" || exit 1
 
 for file in $dir/*.txt; do
     filename=$(basename $file)
-    #echo "파일: $(basename "$file")"
-    #echo "$(basename "$file")"
-    #echo $filename
+    
     for first_small in {a..z}; do
         if [[ $filename == $first_small* ]]; then
             mv $file $first_small
